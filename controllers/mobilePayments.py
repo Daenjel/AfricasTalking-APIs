@@ -2,8 +2,8 @@
 import africastalking
 
 #Set up your credentials
-username = "sandbox"
-api_key = "fbba33f71f5f671f7b1043ff721eec2140c29d6d4e212c23f9c4edcec6b6b898"
+username = "sandbox NAME"
+api_key = "YOUR API KEY"
 
 #Initialize the SDK
 africastalking.initialize(username, api_key)
@@ -12,10 +12,10 @@ africastalking.initialize(username, api_key)
 payments = africastalking.Payment
 
 #Set your product name
-product_name = "Swahili"
+product_name = "PRODUCT NAME"
 
 #Set the phone number you want and set it to the international format
-phone_number = "+254733745544"
+phone_number = "PHONE NUMBER"
 
 #Set the 3 letter ISO currency code and checkout amount
 currency_code = "KES"
