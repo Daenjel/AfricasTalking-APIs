@@ -4,9 +4,9 @@ app = Flask(__name__)
 
 @app.route('/', methods=['POST', 'GET'])
 def ussd_callback():
-    session_id = request.values.get("ATUid_18f5b7db24faa8fed426152baa2c119b", None)
-    service_code = request.values.get("*384*150905#", None)
-    phone_number = request.values.get("+254733745544", None)
+    session_id = request.values.get("sessionId", None)
+    service_code = request.values.get("service_code", None)
+    phone_number = request.values.get("phone", None)
     text = request.values.get("text", "default")
     if text == '':
             response  = "CON What would you want to check \n"
@@ -23,7 +23,6 @@ def ussd_callback():
             balance  = "KES 10,000"
             response = "END Your balance is " + balance
     elif text == '2':
-            phone_number = "0733745544"
             response = "END Your Phone Number is " + phone_number
     else:
         response = "CON Invalid choice.Try Again "
